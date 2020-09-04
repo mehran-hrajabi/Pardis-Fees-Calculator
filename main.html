@@ -1,0 +1,347 @@
+<DOCTYPE html>
+<html lang="fa" dir="rtl">
+<body>
+
+<style>
+.block{
+	text-align:right;
+	float:right;
+	margin:20px;
+	border:2px solid black;
+	padding: 20px;
+}
+</style>
+
+<head>
+	<title>محاسبه شهریه</title>
+		<meta charset="UTF-8" content="Pardis Fees">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="calculator.js"></script>
+</head>
+
+<div class="contiainer">
+	<div class="block">
+		<form>
+			<h3>محاسبه شهریه پردیس : ورودی 95</h3><br>
+			<p>کارآموزی در نیم سالی که اخذ شده تیک زده شود. واحدهای پروژه عملی محسوب می شوند.</p>		
+			
+			<label>ترم اول :</label>
+			<select id="n951">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a951">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi1">
+			<label for="karamoozi1">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم دوم و تابستان :</label>
+			<select id="n952">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a952">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi2">
+			<label for="karamoozi2">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم سوم :</label>
+			<select id="n961">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a961">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi3">
+			<label for="karamoozi3">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم چهارم و تابستان :</label>
+			<select id="n962">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a962">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi4">
+			<label for="karamoozi4">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم پنجم :</label>
+			<select id="n971">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a971">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi5">
+			<label for="karamoozi5">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم ششم و تابستان :</label>
+			<select id="n972">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a972">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi6">
+			<label for="karamoozi6">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم هفتم :</label>
+			<select id="n981">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a981">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi7">
+			<label for="karamoozi7">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم هشتم و تابستان :</label>
+			<select id="n982">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a982">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi8">
+			<label for="karamoozi8">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم نهم :</label>
+			<select id="n991">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a991">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi9">
+			<label for="karamoozi9">کارآموزی</label><br>
+			
+			
+			
+			<label>ترم دهم و تابستان :</label>
+			<select id="n991">
+				<option value="0">نظری</option>
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<select id="a992">
+				<option value="0">عملی</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<input type="checkbox" id="karamoozi10">
+			<label for="karamoozi10">کارآموزی</label><br>
+			
+			<button type="button" class="btn btn-primary" onclick="calculator()">محاسبه</button>
+			
+		</form>
+					
+	</div>
+</div>		
+		
+</body>
