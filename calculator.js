@@ -1,9 +1,10 @@
 function calculator(){
 	
 	var sabet = 4312224 ;
-	var nazari = [] , amali = [] , karamoozi = [] , vahedNazari = [] , vahedAmali = [] , i , feeNazari = [] , feeAmali = [] , fee = [] , check = [] , karamooz ;
+	var nazari = [] , amali = [] , karamoozi = [] , vahedNazari = [] , vahedAmali = [] , i 
+	, feeNazari = [] , feeAmali = [] , fee = [] , check = [] , karamooz ;
 	
-	/*0 : sale aval		1 : sale dovom		2 : sale sevom		3 : sale charom paeez		4 : sale charom bahar		5 : sale panjom*/
+	/*Shahrie har vahed be ezaye har term az 1 ta 10*/
 	nazari[0] = 287481 ;
 	nazari[1] = 287481 ;
 	nazari[2] = 316229 ;
@@ -36,62 +37,55 @@ function calculator(){
 	karamoozi[9] = 250928 ;
 	
 	/*Zakhire tedad vahedaye nazari*/
-	vahedNazari[0] = document.getElementById("n951").value ;
-	vahedNazari[1] = document.getElementById("n9523").value ;
-	vahedNazari[2] = document.getElementById("n961").value ;
-	vahedNazari[3] = document.getElementById("n9623").value ;
-	vahedNazari[4] = document.getElementById("n971").value ;
-	vahedNazari[5] = document.getElementById("n9723").value ;
-	vahedNazari[6] = document.getElementById("n981").value ;
-	vahedNazari[7] = document.getElementById("n9823").value ;
-	vahedNazari[8] = document.getElementById("n991").value ;
-	vahedNazari[9] = document.getElementById("n9923").value ;
+	vahedNazari[0] = Number(document.getElementById("n951").value) ;
+	vahedNazari[1] = Number(document.getElementById("n952").value) ;
+	vahedNazari[2] = Number(document.getElementById("n961").value) ;
+	vahedNazari[3] = Number(document.getElementById("n962").value) ;
+	vahedNazari[4] = Number(document.getElementById("n971").value) ;
+	vahedNazari[5] = Number(document.getElementById("n972").value) ;
+	vahedNazari[6] = Number(document.getElementById("n981").value) ;
+	vahedNazari[7] = Number(document.getElementById("n982").value) ;
+	vahedNazari[8] = Number(document.getElementById("n991").value) ;
+	vahedNazari[9] = Number(document.getElementById("n992").value) ;
 	
 	/*Zakhire tedad vahedaye amali*/
-	vahedAmali[0] = document.getElementById("a951").value ;
-	vahedAmali[1] = document.getElementById("a9523").value ;
-	vahedAmali[2] = document.getElementById("a961").value ;
-	vahedAmali[3] = document.getElementById("a9623").value ;
-	vahedAmali[4] = document.getElementById("a971").value ;
-	vahedAmali[5] = document.getElementById("a9723").value ;
-	vahedAmali[6] = document.getElementById("a981").value ;
-	vahedAmali[7] = document.getElementById("a9823").value ;
-	vahedAmali[8] = document.getElementById("a991").value ;
-	vahedAmali[9] = document.getElementById("a9923").value ;
+	vahedAmali[0] = Number(document.getElementById("a951").value) ;
+	vahedAmali[1] = Number(document.getElementById("a952").value) ;
+	vahedAmali[2] = Number(document.getElementById("a961").value) ;
+	vahedAmali[3] = Number(document.getElementById("a962").value) ;
+	vahedAmali[4] = Number(document.getElementById("a971").value) ;
+	vahedAmali[5] = Number(document.getElementById("a972").value) ;
+	vahedAmali[6] = Number(document.getElementById("a981").value) ;
+	vahedAmali[7] = Number(document.getElementById("a982").value) ;
+	vahedAmali[8] = Number(document.getElementById("a991").value) ;
+	vahedAmali[9] = Number(document.getElementById("a992").value) ;
 	
 	/*Karamoozi*/
-	check[0] = document.getElementById("karamoozi1");
-	check[1] = document.getElementById("karamoozi2");
-	check[2] = document.getElementById("karamoozi3");
-	check[3] = document.getElementById("karamoozi4");
-	check[4] = document.getElementById("karamoozi5");
-	check[5] = document.getElementById("karamoozi6");
-	check[6] = document.getElementById("karamoozi7");
-	check[7] = document.getElementById("karamoozi8");
-	check[8] = document.getElementById("karamoozi9");
-	check[9] = document.getElementById("karamoozi10");
+	check[0] = document.getElementById("karamoozi1").checked;
+	check[1] = document.getElementById("karamoozi2").checked;
+	check[2] = document.getElementById("karamoozi3").checked;
+	check[3] = document.getElementById("karamoozi4").checked;
+	check[4] = document.getElementById("karamoozi5").checked;
+	check[5] = document.getElementById("karamoozi6").checked;
+	check[6] = document.getElementById("karamoozi7").checked;
+	check[7] = document.getElementById("karamoozi8").checked;
+	check[8] = document.getElementById("karamoozi9").checked;
+	check[9] = document.getElementById("karamoozi10").checked;
 	
 	/*karamoozi*/
+	karamooz=0 ;
 	for(i=0 ; i<check.length ; i++){
-		if(check[i]==true){
+		if(check[i] == true){
 			karamooz = karamoozi[i];
 			break;
 		}
 	}
 	
-	/*Tabdile string input ha be number*/
-	for(i=0 ; i<vahedNazari.length ; i++){
-		vahedNazari[i] = number(vahedNazari[i]) ;
-	}
-	for(i=0 ; i<vahedAmali.length ; i++){
-		vahedAmali[i] = number(vahedAmali[i]) ;
-	}
-	
 	/*Mohasebe nazari va amali har term*/
-	for(i=0 ; i<nazari.length ; i++){
+	for(i=0 ; i<vahedNazari.length ; i++){
 		feeNazari[i] = vahedNazari[i] * nazari[i] ;
 	}
-	for(i=0 ; i<amali.length ; i++){
+	for(i=0 ; i<vahedAmali.length ; i++){
 		feeAmali[i] = vahedAmali[i] * amali[i] ;
 	}
 	
@@ -99,11 +93,25 @@ function calculator(){
 	for(i=0 ; i<nazari.length ; i++){
 		fee[i] = feeAmali[i] + feeNazari[i] ;
 	}
-	
+
+	/*Mohasebe shahrie sabet*/
+	if(vahedNazari[9] == 0 && vahedAmali[9] == 0){
+		sabet = 9 * sabet ;
+	}
+	else if(vahedNazari[8] == 0 && vahedAmali[8] == 0 && vahedNazari[9] == 0 && vahedAmali[9] == 0){
+		sabet = 8 * sabet ;
+	}
+	else{
+		sabet = 10 * sabet ;
+	}
+
 	/*Jamee kol*/
+	total=0 ;
 	for(i=0 ; i<fee.length ; i++){
 		total += fee[i] ;
 	}
-	total = total + karamooz ;
+	total = total + karamooz + sabet ;
 	
+	window.alert(total);
+
 }
