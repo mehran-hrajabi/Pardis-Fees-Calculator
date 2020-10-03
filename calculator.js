@@ -141,37 +141,65 @@ function calculator(){
 	document.getElementById("mot10").innerHTML = fee[9] ;
 
 
-	/*Mohasebe shahrie sabet - Mitavan herfei tar nevesht*/
+	/*Mohasebe shahrie sabet*/
 	fix = sabet * 8 ;
-	if(vahedNazari[8] == 0 && vahedAmali[8] == 0){
-		document.getElementById("sab9").innerHTML = 0 ;
-		document.getElementById("kol9").innerHTML = 0 ;
+	/*Terme 9 nadarim*/
+	if((vahedNazari[8] + vahedAmali[8] == 0)){
+		if(pjt!=8 && fs!=8 && temp!=8){
+			document.getElementById("sab9").innerHTML = 0 ;
+			document.getElementById("kol9").innerHTML = 0 ;
+		}
+	/*Faghat yek darse 0 vahedi darim.*/
+		else if(pjt==8 || fs==8 || temp==8){
+			fix += (sabet/2) ;
+			document.getElementById("sab9").innerHTML = 2156112 ;
+			document.getElementById("kol9").innerHTML = fee[8] + 2156112 ;
+		}
 	}
+	/*Terme 9 darse sabte nami darim.*/
 	else if(vahedNazari[8] != 0 || vahedAmali[8] != 0){
-		if(vahedAmali[8]+vahedNazari[8]<5){
+		/*Yek darse sabte nami 1, 2, 3, ya 4 vahedi darim.*/
+		if(vahedAmali[8]+vahedNazari[8]<5 && vahedAmali[8]+vahedNazari[8]>0){
 			fix += (sabet/2) ;
 			document.getElementById("sab9").innerHTML = 2156112 ;
 			document.getElementById("kol9").innerHTML = fee[8] + 2156112 ;
 			}
+		/*Sabte nami yek terme kamel*/
 		else{
 			fix += sabet ;
 			document.getElementById("sab9").innerHTML = 4312224 ;
 			document.getElementById("kol9").innerHTML = fee[8] + 4312224 ;
-
 		}
-		fix += sabet ;
 	}
-	if(vahedNazari[9] == 0 && vahedAmali[9] == 0){
-		document.getElementById("sab10").innerHTML = 0 ;
-		document.getElementById("kol10").innerHTML = 0 ;
 
+	/*Terme 10 nadarim.*/
+	if((vahedNazari[9] + vahedAmali[9] == 0)){
+		if(pjt!=9 && fs!=9 && temp!=9){
+			document.getElementById("sab10").innerHTML = 0 ;
+			document.getElementById("kol10").innerHTML = 0 ;
+		}
+	/*Faghat yek darse 0 vahedi darim.*/
+		else if(pjt==9 || fs==9 || temp==9){
+			fix += (sabet/2) ;
+			document.getElementById("sab10").innerHTML = 2156112 ;
+			document.getElementById("kol10").innerHTML = fee[9] + 2156112 ;
+		}
 	}
+	/*Terme 10 darse sabte nami darim.*/
 	else if(vahedNazari[9] != 0 || vahedAmali[9] != 0){
-		if(vahedAmali[9]+vahedNazari[9]<5){
-		fix += (sabet/2) ;
-		document.getElementById("sab10").innerHTML = 2156112 ;
-		document.getElementById("kol10").innerHTML = fee[9] + 2156112 ;
+		/*Yek darse sabte nami 1, 2, 3, ya 4 vahedi darim.*/
+		if(vahedAmali[9]+vahedNazari[9]<5 && vahedAmali[9]+vahedNazari[9]>0){
+			fix += (sabet/2) ;
+			document.getElementById("sab10").innerHTML = 2156112 ;
+			document.getElementById("kol10").innerHTML = fee[9] + 2156112 ;
 		}
+		/*Faghat yek darse 0 vahedi darim.*/
+		else if((vahedAmali[9]+vahedNazari[9]==0) && (pjt==9 || fs==9 || temp==9)){
+			fix += (sabet/2) ;
+			document.getElementById("sab10").innerHTML = 2156112 ;
+			document.getElementById("kol10").innerHTML = fee[9] + 2156112 ;
+		}
+		/*Sabte nami yek terme kamel*/
 		else{
 			fix += sabet ;
 			document.getElementById("sab10").innerHTML = 4312224 ;
