@@ -1,6 +1,6 @@
 function calculator(){
 	
-	var sabet = 4312224 ;
+	const sabet = 4312224 ;
 	var nazari = [] , amali = [] , karamoozi = [] , vahedNazari = [] , vahedAmali = [] , i 
 	, feeNazari = [] , feeAmali = [] , fee = [] , check = [] , daneshkh = [] , temp , fix , pjt , fs ;
 	
@@ -103,8 +103,6 @@ function calculator(){
 	/*Tamdide project*/
 	pjt = document.getElementById("tamdid").value ;
 	pjt-- ;
-
-	if(pjt>10){pjt = 10 ;}
 	
 	/*Mohasebe nazari va amali har term*/
 	for(i=0 ; i<vahedNazari.length ; i++){
@@ -228,7 +226,7 @@ function calculator(){
 
 
 	/*Jamee kol*/
-	total=0 ;
+	var total=0 ;
 	for(i=0 ; i<fee.length ; i++){
 		total += fee[i] ;
 	}
@@ -236,6 +234,13 @@ function calculator(){
 	total = total + fix ;
 	document.getElementById("tot").innerHTML = total ;
 	
-	/*window.alert(total);*/
+}
 
+
+function resetForm(){
+	document.getElementById("first").reset() ;
+	document.getElementById("second").reset() ;
+	document.getElementById("third").reset() ;
+	document.getElementById("fourth").reset() ;
+	document.getElementById("fiveth").reset() ;
 }
